@@ -1,0 +1,310 @@
+* {
+    box-sizing: border-box;
+
+}
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+    max-width: 100%;
+}
+.container {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 25% 75%;
+    gap: 20px;
+    height: 100vh;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    background: #eee;
+}
+.nav {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    grid-area: 1 / 1 / 1 / 3;
+    position: relative;
+
+
+}
+
+.nav i {
+    position: absolute;
+    right: 0;
+    margin: 30px;
+    padding: 15px 17px;
+    font-size: 1.5rem;
+    background: rgb(75, 2, 148);
+    color: #fff;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    animation: popping 1s ease-in alternate infinite;
+    -webkit-animation: popping 0.5s ease-in alternate infinite;
+}
+@keyframes popping {
+    from {
+        transform: scale(90%);
+        -webkit-transform: scale(90%);
+        -moz-transform: scale(90%);
+        -ms-transform: scale(90%);
+        -o-transform: scale(90%);
+}
+    to {
+        transform: scale(100%);
+        -webkit-transform: scale(100%);
+        -moz-transform: scale(100%);
+        -ms-transform: scale(100%);
+        -o-transform: scale(100%);
+}
+}
+.right {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px;
+    background: #fff;
+    
+}
+
+
+.right .active {
+    background: rgb(26, 1, 51);
+}
+.right .active:hover {
+    background: rgb(26, 1, 51);
+}
+
+.right > div {
+    background: rgb(75, 2, 148);
+    width: 100%;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 15px 25px;
+    cursor: pointer;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -ms-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+}
+
+.right > div:hover {
+    background: rebeccapurple;
+}
+.cont-que {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    background: #fff;
+    position: relative;
+    max-width: 100%;
+    object-fit: cover;
+}
+.ques, .fill, .quote {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+    gap: 20px;
+    padding: 30px 50px;
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    align-items: flex-start;
+    object-fit: cover;
+    opacity: 0;
+    background: #fff;
+    visibility: hidden;
+}
+.notice {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    text-align: center;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px;
+}
+
+.notice h2 {
+    font-size: 30px;
+}
+.notice ol li {
+    font-size: 20px;
+    margin: 5px;
+}
+.notice.note {
+    /* z-index: 5; */
+    visibility: visible;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+}
+.show {
+    opacity: 1;
+    transition: 0.2s ease-in-out;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -ms-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
+    visibility: visible;
+}
+.span {
+    background: rgb(75, 2, 148);
+    padding: 20px;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    cursor: pointer;
+    max-height: 100%;
+    position: relative;
+    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -ms-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+}
+
+
+.span:hover {
+    background: rgb(148, 87, 209);
+}
+.dis {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background: #fff;
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    z-index: 100;
+}
+
+.dis i {
+    font-size: 2rem;
+    padding: 5px;
+    margin: 20px;
+    color: #eee;
+    background: #111;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.dis .text {
+    width: 60%;
+    height: 70%;
+    border: 2px solid rebeccapurple;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    display: flex;
+    padding: 40px;
+    text-align: center;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.dis .text p {
+    font-size: 30px;
+}
+
+.dis .time {
+    position: absolute;
+    width: 100%;
+    background: red;
+    height: 5px;
+    bottom: 0;
+    margin: 10px;
+    transform-origin: left;
+}
+
+
+.anim {
+    transition: 15s linear;
+    -webkit-transition: 15s linear;
+    -moz-transition: 15s linear;
+    -ms-transition: 15s linear;
+    -o-transition: 15s linear;
+    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+}
+
+
+
+
+
+
+@media (max-width:999px) {
+    .container {
+        display: none;
+    }
+    body::before {
+        content: 'SORRY!!! This Page is only available on PC ';
+        height: 100vh;
+        width: 100%;
+        color: #111;
+        font-size: 30px;
+        z-index: 50;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 50px;
+        text-align: center;
+    }
+}
+
+@media (max-width:1150px) {
+    .span {
+        padding: 15px;
+    }
+    .ques, .fill, .quote {
+        padding: 30px;
+    }
+    .right {
+        padding: 30px;
+    }
+}
